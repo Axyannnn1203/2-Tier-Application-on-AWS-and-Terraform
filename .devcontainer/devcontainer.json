@@ -1,0 +1,17 @@
+{
+  "name": "Terraform + AWS DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "terraform": "latest",
+    "aws-cli": "latest"
+  },
+  "postCreateCommand": "terraform -v && aws --version",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hashicorp.terraform",
+        "amazonwebservices.aws-toolkit-vscode"
+      ]
+    }
+  }
+}
